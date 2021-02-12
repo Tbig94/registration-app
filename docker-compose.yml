@@ -1,0 +1,24 @@
+version: '3.8'
+services:
+  #service 1: mysql database
+  db:
+    image: mysql:latest
+    container_name: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_USER=root
+    ports:
+      - "3307:3306"
+    restart: always
+
+  #service 2: spring boot app
+  customerservice:                        #it is just a name, which will be used only in this file.
+    image: registration-app               #name of the image after dockerfile executes
+    container_name: registration-app   #name of the container created from docker image
+
+    build:
+      context: .                          #docker file path (. means root directory)
+      dockerfile: Dockerfile              #docker file name
+    ports:
+      - "8080:8080"                       #docker containter port with your os port
+    restart: always
