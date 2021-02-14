@@ -17,7 +17,7 @@ import java.util.Map;
 public class
 CryptoCurrencyServiceImpl implements CryptoCurrencyService {
 
-    private String API_KEY = System.getenv("CRYPTO_API_KEY");
+    private final String API_KEY = System.getenv("CRYPTO_API_KEY");
 
 
     public CryptoCurrency getCurrencyData() {

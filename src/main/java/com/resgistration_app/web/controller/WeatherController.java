@@ -18,14 +18,6 @@ public class WeatherController {
     }
 
 
-    /*
-    @RequestMapping(path = "/weather", method = RequestMethod.GET)
-    public String showWeather(Model model) {
-        model.addAttribute("weatherData", weatherService.getWeatherData());
-        return "weather";
-    }
-     */
-
     @RequestMapping(path = "/weather", method = RequestMethod.GET)
     public String showWeather(Model model) {
         model.addAttribute("weatherData", weatherService.allWeatherData());

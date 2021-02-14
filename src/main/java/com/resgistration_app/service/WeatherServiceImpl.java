@@ -19,7 +19,7 @@ import java.util.Map;
 @Service
 public class WeatherServiceImpl implements  WeatherService {
 
-    private String API_KEY = System.getenv("WEATHER_API_KEY");
+    private final String API_KEY = System.getenv("WEATHER_API_KEY");
 
     @Value("${WEATHER_API_LOCATION1}")
     private String LOCATION1;
