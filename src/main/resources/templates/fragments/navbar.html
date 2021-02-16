@@ -18,29 +18,31 @@
             crossorigin="anonymous">
 
 
-    <h1 class="display-5 mt-0 p-2">Welcome, <span sec:authentication="principal.username">Name</span> </h1>
+    <h1 class="display-5 mt-0 p-2 text-secondary" style="margin-left: 200px">
+        Welcome, <span sec:authentication="principal.username" style="font-style: italic;" class="text-warning">Name</span>
+    </h1>
 
     <nav class="navbar-expand-lg navbar-dark bg-dark text-light">
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav mr-5">
                 <li class="navbar-nav mr-3">
-                    <a class="nav-item nav-link" href="index">Home</a>
+                    <a class="nav-item nav-link" href="index" style="margin-right: 50px; margin-left: 200px">Home</a>
                 </li>
 
                 <li class="navbar-nav mr-3">
-                    <a class="nav-item nav-link" href="user-list">User list</a>
+                    <a class="nav-item nav-link" href="user-list" style="margin-right: 50px;">User list</a>
                 </li>
 
                 <li class="navbar-nav mr-3">
-                    <a class="nav-item nav-link" href="item-list">Item list</a>
+                    <a class="nav-item nav-link" href="item-list" style="margin-right: 50px;">Item list</a>
                 </li>
 
                 <li class="navbar-nav mr-3">
-                    <a class="nav-item nav-link" href="weather">Weather</a>
+                    <a class="nav-item nav-link" href="weather" style="margin-right: 50px;">Weather</a>
                 </li>
 
                 <li class="navbar-nav mr-3">
-                    <a class="nav-item nav-link" href="crypto-currency">Crypto</a>
+                    <a class="nav-item nav-link" href="crypto-currency" style="margin-right: 50px;">Crypto</a>
                 </li>
 
                 <li class="navbar-nav" sec:authorize="isAuthenticated()">

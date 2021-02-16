@@ -20,7 +20,6 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private UserService userService;
 
-
     @Bean
     BCryptPasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
@@ -42,7 +41,7 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests().antMatchers(
-                "/registration**", "/js/**", "/css/**", "/img/**", "/actuator/**" ).permitAll()
+                "/registration**", "/js/**", "/css/**", "/img/**", "/actuator/**").permitAll()
                 .anyRequest().authenticated()
                     .and()
                 .formLogin()
