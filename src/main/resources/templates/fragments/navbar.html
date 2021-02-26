@@ -45,7 +45,7 @@
                     <a class="nav-item nav-link" href="crypto-currency" style="margin-right: 50px;">Crypto</a>
                 </li>
 
-                <li class="navbar-nav" sec:authorize="isAuthenticated()">
+                <li class="navbar-nav" sec:authorize="isAuthenticated()" style="margin-left: 250px; margin-top: 5px;">
                     <a class="text-light" href="" th:href="@{/logout}">Logout</a>
                 </li>
 
