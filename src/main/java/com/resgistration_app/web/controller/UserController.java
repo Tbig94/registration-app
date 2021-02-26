@@ -37,7 +37,7 @@ public class UserController {
     @PostMapping("/registration")
     public String registerUserAccount(@Valid @ModelAttribute("user") UserRegistrationDto dto, BindingResult result) {
         if (result.hasErrors()) {
-            return "/registration";
+            return "registration";        // return registration
         }
         userService.save(dto);
         return "redirect:/registration?success";
