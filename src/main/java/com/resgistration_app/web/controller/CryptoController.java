@@ -1,4 +1,4 @@
-package com.resgistration_app.web.controller.rest;
+package com.resgistration_app.web.controller;
 
 import com.resgistration_app.service.CryptoCurrencyService;
 import com.resgistration_app.service.CryptoCurrencyServiceImpl;
@@ -8,12 +8,12 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class CryptoCurrencyController {
+public class CryptoController {
 
     private CryptoCurrencyService cryptoCurrencyService;
 
     @Autowired
-    public CryptoCurrencyController(CryptoCurrencyServiceImpl cryptoCurrencyService) {
+    public CryptoController(CryptoCurrencyServiceImpl cryptoCurrencyService) {
         this.cryptoCurrencyService = cryptoCurrencyService;
     }
 

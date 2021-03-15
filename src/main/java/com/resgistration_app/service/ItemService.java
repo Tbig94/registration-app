@@ -8,8 +8,6 @@ public interface ItemService {
 
     Item saveItem(Item item);
 
-    Item findItem(String name);
-
     List<Item> getAllItems();
 
     void deleteItem(Long id);

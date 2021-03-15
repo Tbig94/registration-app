@@ -19,7 +19,7 @@ public class ItemController {
 
 
     @RequestMapping(path = "/item-list", method = RequestMethod.GET)
-    public String showAllUsers(Model model) {
+    public String showAllItems(Model model) {
         model.addAttribute("listItems", itemService.getAllItems());
         return "item-list";
     }

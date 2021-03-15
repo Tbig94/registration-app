@@ -40,10 +40,13 @@ CryptoCurrencyServiceImpl implements CryptoCurrencyService {
             System.out.println("\n" + "CRYPTO_API_DATA.....");
             System.out.println(result);
 
+
             Map<String, Object> respMap = jsonToMap(result.toString());
             Map<String, Object> dataMap = jsonToMap(respMap.get("status").toString());
 
             System.out.println("Data: " + dataMap.get("timestamp"));
+
+
 
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
